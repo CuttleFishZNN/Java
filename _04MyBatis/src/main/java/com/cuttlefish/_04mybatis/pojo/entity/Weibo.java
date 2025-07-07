@@ -17,6 +17,13 @@ public class Weibo {
         this.userId = userId;
     }
 
+    public Weibo(int id, String content, Date created, int userId) {
+        this.id = id;
+        this.content = content;
+        this.created = created;
+        this.userId = userId;
+    }
+
     public int getUserId() {
         return userId;
     }

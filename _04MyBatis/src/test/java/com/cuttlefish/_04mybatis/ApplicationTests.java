@@ -29,7 +29,7 @@ class ApplicationTests {
 	}
 	@Test
 	void insertUserTest(){
-		User user = new User(1L,"zhang","010418","ZNN",new Date());
+		User user = new User(1L,"zhang1","010418","ZNN",new Date());
 		userMapper.insert(user);
 	}
 
@@ -50,6 +50,17 @@ class ApplicationTests {
 		Comment comment = new Comment("hello world",new Date(),200L,2L);
 		commentMapper.insert(comment);
 
+	}
+	@Test
+	void updateWeiboByIdTest(){
+		Weibo weibo = new Weibo("hello world",new Date(),100);
+		weibo.setId(200);
+		System.out.println(weiboMapper.updateWeiboById(weibo));
+
+	}
+	@Test
+	void selectWeiboByIdTest(){
+		System.out.println(weiboMapper.selectWeiboById(200));
 	}
 
 }
